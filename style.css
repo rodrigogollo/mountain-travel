@@ -29,6 +29,9 @@ nav {
     padding: 32px;
     align-items: center;
     justify-content: space-between;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadein 1s forwards;
 }
 
 nav .side-nav {
@@ -71,6 +74,9 @@ header {
     min-height: 80%;
     line-height: 6rem;
     user-select: none;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadein 1s forwards .5s;
 }
 
 header a {
@@ -327,6 +333,17 @@ footer .icons i:hover {
     color: rgba(255, 255, 255, 1);
     cursor: pointer;
 }
+
+/* KEY FRAMES */
+
+@keyframes fadein {
+    100% {
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+
+/* MEDIA */
 
 @media screen and (max-width: 1200px) {
     header {
