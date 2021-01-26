@@ -4,6 +4,7 @@
 #### Resources:
 - Raw CSS, HTML & JS
 - Flexbox
+- CSS Transform & Transitions
 - Pexels
 - Font Awesome Icons
 
