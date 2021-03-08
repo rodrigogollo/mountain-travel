@@ -24,6 +24,9 @@ html, body {
 }
 
 nav {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
     display: flex;
     min-height: 96px;
     padding: 32px;
@@ -67,11 +70,11 @@ nav .logo:hover {
 header {
     color: var(--primary-link-text);
     font-size: 3rem;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    min-height: 80%;
     line-height: 6rem;
     user-select: none;
     opacity: 0;
@@ -103,10 +106,18 @@ header a:hover {
 .box {
     display: none;
     opacity: 0;
+    padding: 5px;
+    border: 1px solid white;
+
 }
 
 .box:hover {
     cursor: pointer;
+    background: var(--secondary-background);
+}
+
+.box:active {
+    background: none;
 }
 
 .box-1,
@@ -115,25 +126,29 @@ header a:hover {
     width: 40px;
     height: 5px;
     background-color: white;
-    margin-bottom: 5px;
+    margin: 3px 0;
+    border-radius: 15px;
     transition: all .2s linear;
 } 
 
+nav.open {
+    background-color:rgba(0, 0, 0, 0.6);
+}
+
 nav.open .box .box-1 {
-    transform: rotate(45deg) translate(10px, 10px);
+    transform: rotate(45deg) translate(8px, 8px);
 }
 
 nav.open .box .box-2 {
     opacity: 0;
 }
 nav.open .box .box-3 {
-    transform: rotate(-45deg) translate(4px, -4px);
+    transform: rotate(-45deg) translate(8px, -8px);
 }
 
 nav.open .side-nav {
     display: flex;
     opacity: 1;
-    margin-top: 10px;
 }
 
 nav.open .side-nav a {
@@ -141,8 +156,9 @@ nav.open .side-nav a {
     text-align: center;
     padding: 5px;
     margin: 5px;
-    background-color: rgba(255,255,255,0.2);
+    background-color: var(--secondary-background);
     border: none;
+    border-radius: 15px;
 }
 
 nav.open .side-nav a:active {
@@ -423,7 +439,9 @@ footer .icons i:hover {
 @media screen and (max-width: 800px) {
 
     .box {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         opacity: 1;
     }
 

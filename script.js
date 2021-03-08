@@ -13,3 +13,9 @@ window.onscroll = function(){
         goTop.classList.remove("show");
     }
 }
+
+window.addEventListener("resize", function() {
+    if(document.body.clientWidth > 780) {
+        nav.classList.remove('open');
+    }
+ });
