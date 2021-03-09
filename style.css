@@ -355,7 +355,7 @@ footer .icons i:hover {
     position:fixed;
     bottom: 10px;
     right: 10px;
-    color: black;
+    color: rgba(0,0,0,0.8);
     border-radius: 50%;
     border: none;
     background: white;
