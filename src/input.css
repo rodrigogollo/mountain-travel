@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@theme {
+  --color-mint-500: oklch(0.72 0.11 178);
+  --color-primary-background: white;
+  --color-primary-header-text: rgba(0, 0, 0, 0.8);
+  --color-primary-link-text: white;
+  --color-primary-testimonial-person: rgba(0, 0, 0, 0.5);
+  --color-secondary-background: rgba(255, 192, 203, 0.4);
+  --color-primary-form-button: lightblue;
+}

@@ -2,121 +2,137 @@
 <html>
     <head>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
-        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Mountain Travel</title>
+        <link rel="icon" type="image/x-icon" href="./img/mountain.ico">
+        <link href="./src/output.css" rel="stylesheet">
     </head>
     <body>
-        <div id="container" class="container">
-            <nav>
-                <p class="logo">Mountain Travel</p>
-                <div class="box">
-                    <div class="box-1"></div>
-                    <div class="box-2"></div>
-                    <div class="box-3"></div>
-                </div>
-                <div class="side-nav">
-                    <a href="#destinations">About</a>
-                    <a href="#tour">Tours</a>
-                    <a href="#testimonials">Testimonials</a>
-                    <a href="#contact">Contact Us</a>
+        <div id="container" class="xl:h-screen bg-[url('../img/background.jpeg')] bg-center bg-cover bg-no-repeat w-full h-96 lg:h-124 font-script scroll-smooth bg-mountain">
+            <div class="w-full bg-black/50 fixed right-0 top-0">
+              <i id="open" class="fas fa-bars fa-2x text-white p-4 lg:cursor-pointer"></i>
+            </div>
+            <nav class="flex flex-col fixed z-10 w-72 h-screen p-4 items-center justify-start bg-white border-x-2 border-black hidden">
+              <div class="flex flex-row">
+                <p class="text-primary-header-text text-xl font-bold">Mountain Travel</p>
+                <i id="close" class="far fa-times-circle fa-2x text-primary-header-text m-4 absolute left-0 top-0 lg:cursor-pointer"></i>
+              </div>
+                <div class="flex flex-col items-center justify-center text-center text-xl text-primary-header-text w-full [&>*]:w-full [&>*]:p-2 [&>*]:border-b-2 [&>*]:border-primary-header-text">
+                    <a class="nav" href="#container">Home</a>
+                    <a class="nav" href="#destinations">About</a>
+                    <a class="nav" href="#tour">Tours</a>
+                    <a class="nav" href="#testimonials">Testimonials</a>
+                    <a class="nav" href="#contact">Contact Us</a>
                 </div>
             </nav>
-            <header>
-                <h2>Mountain Travel</h2>
-                <p>Unmissable Adventure Tours Around The World</p>
-                <a href="#contact">Contact Us Now</a>
+            <header class="xl:pt-40 lg:pt-20 pt-16 text-primary-link-text flex flex-col justify-center items-center object-cover">
+                <img class="text-primary-header-text w-20 h-20 lg:w-40 lg:h-40" src="./img/mountain.ico"></i>
+                <h2 class="text-4xl lg:text-5xl xl:text-6xl mb-4">Mountain Travel</h2>
+                <p class="text-lg lg:text-xl xl:text-2xl">Unmissable Adventure Tours Around The World</p>
+                <a class="text-sm xl:text-xl font-bold text-primary-header-text uppercase border-2 bg-red-200 rounded-3xl py-2 px-4 mt-10" href="#contact">Contact Us Now</a>
             </header>
         </div>
         <div class="main">
-            <div class="destinations" id="destinations">
-                <div class="section-header">
-                    <h1>Some Of Our Destinations</h1>
-                    <p>Tired of the ocean? Are the plans too plain? Come along with us on one of our mountain adventures.</p>
+            <section class="xl:py-20 xl:px-40" id="destinations">
+                <div class="flex flex-col text-primary-header-text items-center p-4 text-lg text-center">
+                    <h1 class="mb-4 font-bold text-2xl">Some Of Our Destinations</h1>
+                    <p class="pb-4">Tired of the ocean? Are the plans too plain? Come along with us on one of our mountain adventures.</p>
                     <p>Here are some pictures from people who have had elevated experiences with us.</p>
-                    <p class="line"></p>
                 </div>
-                <div class="destinations-grid">
-                    <div class="grid-1">
-                        <img src="img/mountain-1.jpeg" alt="">
-                        <img src="img/mountain-2.jpeg" alt="">
-                    </div>
-                    <div class="grid-2">
-                        <img src="img/mountain-3.jpeg" alt="">
-                        <img src="img/mountain-4.jpeg" alt="">
-                    </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:grid-rows-2 p-2 lg:[&_img]:h-128 [&_img]:h-96 [&_img]:object-cover [&_img]:p-4 ">
+                  <img class="col-span-1 w-full lg:col-span-2" src="img/mountain-1.jpeg" alt="">
+                  <img class="col-span-1 w-full" src="img/mountain-2.jpeg" alt="">
+                  <img class="col-span-1 w-full" src="img/mountain-3.jpeg" alt="">
+                  <img class="col-span-1 w-full lg:col-span-2" src="img/mountain-4.jpeg" alt="">
                 </div>
-            </div>
-            <div class="tour-packages" id="tour">
-                <div class=" section-header">
-                    <h1>Tour Packages</h1>
+            </section>
+            <p class="h-1 w-full rounded bg-primary-header-text mt-4"></p>
+
+            <section class="bg-red-200 xl:py-20 xl:px-40" id="tour">
+                <div class="flex flex-col text-primary-header-text items-center p-4 text-lg text-center md:col-span-2">
+                    <h1 class="mb-4 font-bold text-2xl">Tour Packages</h1>
                     <p>We offer a variety of mountaineering packages. </p>
                     <p>Whether you've climbed Everest or don't even know what a mountain is, we've got the perfect vacation for you.</p>
-                    <p class="line"></p>
                 </div>
-                <div class="tour-items">
-                    <div class="item item-1">
-                        <i class="far fa-compass fa-5x"></i>
-                        <h3>Guided Trips</h3>
-                        <p>Looking for the complete experience? Take a tour with one of our experts. They'll show you secrets that you're likely to miss otherwise.</p>
-                    </div>
-                    <div class="item item-2">
-                        <i class="fas fa-camera-retro fa-5x"></i>
-                        <h3>Photo Trips</h3>
-                        <p>	Want to experience nature's beauty without all of that annoying exercise? Take a photo tour on one of our mountain buses.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+                    <div class="p-4 m-4 text-center text-lg border-1 rounded col-span-1">
+                        <div class="flex items-center flex-row w-full justify-center">
+                          <i class="far fa-compass fa-2x text-primary-header-text"></i>
+                          <h3 class="inline-block text-lg p-2 font-bold text-primary-header-text">Guided Trips</h3>
+                        </div>
+                        <p class="text-md">Looking for the complete experience? Take a tour with one of our experts. They'll show you secrets that you're likely to miss otherwise.</p>
                     </div>
 
-                <div class="item item-3">
-                    <i class="fas fa-bicycle fa-5x"></i>
-                    <h3>Biking Trips</h3>
-                    <p>If bicycles are more your speed, consider taking a tour through one of our mountain bike paths. We'll provide the bikes, and lunch too.</p>
-                </div>
-                <div class="item item-4">
-                    <i class="fas fa-flag-checkered fa-5x"></i>
-                    <h3>Racing Trips</h3>
-                    <p>Got a competitive spirit? Sign up for one of our mountain marathoons! Try to reach the summit before anyone else.</p>
-                </div>
-                </div>
-            </div>
-            <div class="testimonials" id="testimonials">
-                <div class="section-header">
-                    <h1>Testimonials From Our Adventurers:</h1>
-                </div>
-                <div class="testimonials-items">
-                    <div class="item item-1">
-                        <p>Wow! This tour made me realize how much i love mountains. After going on one of these tours, i can safely say that they are my favorite geographic feature, and my favorite word that starts with M.</p>
-                        <p class="person"> - Colt Steele</p>
+                    <div class="p-4 m-4 text-center text-lg border-1 rounded col-span-1">
+                        <div class="flex items-center flex-row w-full justify-center">
+                          <i class="fas fa-camera-retro fa-2x text-primary-header-text"></i>
+                          <h3 class="inline-block text-lg p-2 font-bold text-primary-header-text">Photo Trips</h3>
+                        </div>
+                        <p class="text-md">	Want to experience nature's beauty without all of that annoying exercise? Take a photo tour on one of our mountain buses.</p>
                     </div>
-                    <div class="item item-2">
-                        <p>I never understood why people cared so much about mountains. But then i went on one of these tours. Now i can't understand people who don't care about mountains!</p>
-                        <p class="person"> - Elie Schoppik</p>
+                    
+                    <div class="p-4 m-4 text-center text-lg border-1 rounded col-span-1">
+                        <div class="flex items-center flex-row w-full justify-center">
+                          <i class="fas fa-bicycle fa-2x text-primary-header-text"></i>
+                          <h3 class="inline-block text-lg p-2 font-bold text-primary-header-text">Biking Trips</h3>
+                        </div>
+                        <p class="text-md">If bicycles are more your speed, consider taking a tour through one of our mountain bike paths. We'll provide the bikes, and lunch too.</p>
                     </div>
-                    <div class="item item-3">
-                        <p>If you want to understand the universe, head to the mountains. I mean, seriously. It's like, woah. You know? It's like that.</p>
-                        <p class="person"> - Tim Garcia</p>
+
+                    <div class="p-4 m-4 text-center text-lg border-1 rounded col-span-1">
+                        <div class="flex items-center flex-row w-full justify-center">
+                          <i class="fas fa-flag-checkered fa-2x text-primary-header-text"></i>
+                          <h3 class="inline-block text-lg p-2 font-bold text-primary-header-text">Racing Trips</h3>
+                        </div>
+                      <p class="text-md">Got a competitive spirit? Sign up for one of our mountain marathoons! Try to reach the summit before anyone else.</p>
                     </div>
                 </div>
-            </div>
-            <div class="contact" id="contact">
-                <div class="learn section-header">
-                    <h1>Learn More</h1>
-                    <p>Want to know about our upcoming mountain-related events, or come to one of our mixers? Just sign up for our mailing list. No spam from us, we promise! Except for the spam we give you to keep up your energy while you're hiking through the mountains. We have tons of that!</p>
+            </section>
+
+            <p class="h-1 w-full rounded bg-primary-header-text mt-4"></p>
+            <section class="xl:py-20 xl:px-40" id="testimonials">
+                <div class="flex flex-col text-primary-header-text items-center p-4 text-lg text-center">
+                  <h1 class="mb-4 font-bold text-2xl">Some Of Our Destinations</h1>
+                  <div class="grid grid-cols-1 lg:grid-cols-3 grid-rows-auto [&>p]:text-lg [&>p]:italic [&>p]:p-2 [&>p]:mb-2 [&_span]:font-bold">
+                      <p>Wow! This tour made me realize how much i love mountains. After going on one of these tours, i can safely say that they are my favorite geographic feature, and my favorite word that starts with M.<span> - Colt Steele</span></p>
+
+                      <p>I never understood why people cared so much about mountains. But then i went on one of these tours. Now i can't understand people who don't care about mountains!<span> - Elie Schoppik</span></p>
+
+                      <p>If you want to understand the universe, head to the mountains. I mean, seriously. It's like, woah. You know? It's like that.<span> - Tim Garcia</span></p>
+                  </div>
                 </div>
-                <div class="form">
-                    <input type="text" placeholder="Email">
-                    <button>subscribe now</button>
+            </section>
+            <p class="h-1 w-full rounded bg-primary-header-text my-4"></p>
+
+            <section class="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-1 lg:gap-4 bg-primary-header-text p-8 xl:py-20 xl:px-40" id="contact">
+                <div class="text-white items-center p-4 text-lg text-center">
+                  <div class="col-span-1 lg:col-start-2 lg:col-end-3">
+                    <h1 class="mb-4 font-bold text-2xl">Learn More</h1>
+                    <p class="text-lg">Want to know about our upcoming mountain-related events, or come to one of our mixers? Just sign up for our mailing list. No spam from us, we promise! Except for the spam we give you to keep up your energy while you're hiking through the mountains. We have tons of that!</p>
+                  </div>
                 </div>
-            </div>
+                <div class="col-span-1 grid grid-cols-1 gap-4 lg:gap-1 grid-rows-2 md:grid-cols-3 md:grid-rows-1 lg:grid-rows-2 lg:grid-cols-1 items-center w-full">
+                    <input class="md:col-span-2 bg-white w-full p-4 rounded-3xl" type="text" placeholder="Email">
+                    <button class="md:col-span-1text-sm font-bold text-primary-header-text uppercase border-2 bg-red-200 rounded-3xl py-2 px-4">subscribe now</button>
+                </div>
+            </section>
         </div>
-        <footer>
-            <p>Images of Courtesy of Pexels</p>
-            <p>why are you even reading this? there's never anything interesting in the footer!</p>
-            <div class="icons">
-                <i class="fab fa-twitter fa-2x"></i>
-                <i class="fab fa-facebook fa-2x"></i>
-                <i class="fab fa-linkedin fa-2x"></i>
+        <p class="h-1 w-full rounded bg-primary-header-text mt-4"></p>
+        <footer class="flex flex-col items-center text-center p-4">
+            <img class="text-primary-header-text m-4 w-20 h-20 lg:w-40 lg:h-40" src="./img/mountain.ico"></i>
+            <p class="text-xl">Images of Courtesy of Pexels</p>
+            <p class="text-xl">2025</p>
+            <div class="flex flex-row justify-center m-4 w-full">
+                <i class="fab fa-twitter fa-2x text-primary-header-text m-4"></i>
+                <i class="fab fa-tiktok fa-2x text-primary-header-text m-4"></i>
+                <i class="fab fa-youtube fa-2x text-primary-header-text m-4"></i>
+                <i class="fab fa-facebook fa-2x text-primary-header-text m-4"></i>
+                <i class="fab fa-linkedin fa-2x text-primary-header-text m-4"></i>
             </div>
         </footer>
-        <a href="#container" placeholder="Go to Top!"><i id="top" class="fas fa-arrow-circle-up fa-3x"></i></a>
-        <script src="script.js"></script>
+        <a class="fixed bottom-0 right-0 z-0 bg-white rounded-3xl" href="#container" placeholder="Go to Top!">
+          <i id="top" class="fas fa-arrow-circle-up fa-3x text-primary-header-text"></i>
+        </a>
+        <script src="./script.js"></script>
     </body>
 </html>

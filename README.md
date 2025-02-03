@@ -2,10 +2,10 @@
 ### A simple responsive Startup Website.
 
 #### Resources:
-- Raw CSS, HTML & JS
+- HTML & JS
+- ~~Raw CSS~~
+- TailwindCSS
 - Flexbox
-- CSS Transform & Transitions
+- ~~CSS Transform & Transitions~~
 - Pexels
 - Font Awesome Icons
-
-
